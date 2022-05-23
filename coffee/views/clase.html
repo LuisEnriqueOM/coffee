@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark vorder-bottom border primary">
+              <div class="container-fluid ">
+                  <a href="./index.html" class="navbar-brand">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cup" viewBox="0 0 16 16">
+                        <path d="M1 2a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1h.5A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-.55a2.5 2.5 0 0 1-2.45 2h-8A2.5 2.5 0 0 1 1 12.5V2zm13 10h.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5H14v8zM13 2H2v10.5A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V2z"/>
+                      </svg>
+                    <strong>InfCoffee</strong>
+                  </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                      </ul>
+                      <form id="contenUser" class="btn-group dropstart visually-hidden">
+                        <!-- <img src=".." class="rounded-circle" alt="..."> -->
+                        <button type="button"  class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropstart
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Editar</a></li>
+                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                          <li><a  class="dropdown-item" href="#">Cerrar sesion</a></li>
+                        </ul>
+                      </form>
+                    </div>
+              </div>
+          </nav>
+      </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="acciones" class="d-grid gap-2 d-md-flex justify-content-md-end visually-hidden">
+                <button class="btn btn-primary me-md-2" type="button">Button</button>
+                <button class="btn btn-primary" type="button">Button</button>
+            </div>
+            <div id="tableContent" class="container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Precio</th>
+                    <th class="text-center" scope="col">Accion</th>
+                  </tr>
+                </thead>
+                <tbody id="stock">
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </main>
+</body>
+
+<!-- Modal EDITAR PRODUCTO-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="modalAcciones">
+            <div class="input-group flex-nowrap mb-3">
+              <span class="input-group-text" id="addon-wrapping">N</span>
+              <input id="nombre" type="text" class="form-control user" placeholder="Nombre" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap mb-3">
+              <span class="input-group-text" id="addon-wrapping">$</span>
+              <input id="precio" type="number" class="form-control user" placeholder="Precio" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap mb-3">
+              <span class="input-group-text" id="addon-wrapping">Gr</span>
+              <input id="peso" type="text" class="form-control user" placeholder="Peso" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div id="btnAcciones" class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <!-- <button type="submit" class="btn btn-primary">Ingresar</button> -->
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</html>
+<!-- Modal INVENTARIO-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Productos en stock</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="inventario" class="modal-body">
+        ...                                                                                                                                                                 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/bootstrap/bootstrap.js" type="text/javascript"></script>
+<script src="../js/sweetalert/sweetalert2.all.min.js"></script>
+<script src="../js/tienda.js" type="text/javascript"></script>

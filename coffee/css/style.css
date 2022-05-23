@@ -1,0 +1,102 @@
+body{
+    background-color: dimgray;
+    background-image: url("../img/fondo.svg");
+}
+.imgCarrousel{
+    object-fit: cover;
+} 
+#container{
+    width: 100%;
+    display: flex;
+    max-width: 100%;
+}
+.card img{
+    width: 100%;
+    height:min-content;
+}
+.card{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    cursor: default;
+}
+.cardAnimation:hover{
+    box-shadow: 5px 5px 20px rgb(65, 64, 64);
+    cursor: default;
+    transition: all 400ms ease;
+    transform: translateY(-3%);
+}
+.estilBienvenida{
+    padding: 1vh;
+    border-radius: 6px;
+    box-shadow: 5px 5px 20px rgba(92, 62, 62, 1.0);
+}
+.ingreso{
+    padding: 2vh;
+}
+main > .container {
+    padding: 30px 0;
+}
+#tableContent{
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0,1.2);
+    background: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75));
+}
+table{
+    border-collapse: collapse;
+    text-shadow: 4px 4px 9px rgba(0, 0, 0,0.5);
+    background: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75));
+}
+th,td{
+    border: none;
+    color: white;
+}
+tr:hover td{
+    background-color: #967436;
+    color: white;
+    border-radius: 5px;
+}
+.registro{
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0,1.2);
+    background: linear-gradient(rgba(25, 67, 173, 0.75),rgba(25, 67, 173, 0.75));
+}
+.logging{
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0,1.2);
+    background: linear-gradient(rgba(25, 173, 141, 0.75),rgba(25, 173, 141, 0.75));
+}
+#ticket {
+    background: white;
+    margin: 0 1em;
+    padding: 1em;
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+  }
+  #ticket h1 {
+    text-align: center;
+  }
+  #ticket table {
+    font-family: monospace;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  #ticket td, #ticket th {
+    padding: 5px;
+  }
+  #ticket th {
+    text-align: left;
+  }
+  #ticket td, #ticket #total {
+    text-align: right;
+  }
+  #ticket tfoot th {
+    border-top: 1px solid black;
+  }
